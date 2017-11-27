@@ -7,11 +7,14 @@
 </ul>
 
 ### Como compilar o projeto
+```sh
+$  gcc catarata.c -o catarata -lm
+```
 
 ```sh
 $  ./catarata -i Catarata.ppm -f ppm -o diagnostico.txt
 ```
-<p>É importante ressaltar que pode ser necessário alterar o nome da imagem, podendo ser "Catarata2.ppm", por exemplo.</p>
+<i>É importante ressaltar que pode ser necessário alterar o nome da imagem, podendo ser "Catarata2.ppm", por exemplo.</i>
 
 <h3>Diagnóstico de Catarata</h3>
 
