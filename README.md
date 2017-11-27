@@ -6,9 +6,15 @@
   <li><a href="https://github.com/tiagojordao">Tiago Jordão Pereira Cabral de Morais</a></li> 
 </ul>
 
+### Como compilar o projeto
+```sh
+$  ./catarata -i Catarata.ppm -f ppm -o diagnostico.txt
+```
+
+
 <h3>Diagnóstico de Catarata</h3>
 
-<h4>O que foi feito:</h4>
+### O que foi feito:
 <ul>
   <li>Leitura das imagens de acordo com os tipos de dados suportados em C</li>
   <li>Modularização do programa</li>
@@ -20,12 +26,12 @@
   <li>Filtro de Sobel</li>
 </ul>
 
-<h4>O que não foi feito:</h4>
+### O que não foi feito:
 <ul>
   <li>Aplicar corretamente a transformada de Hough na imagem Normal2</li>
 </ul>
 
-<h4>O que seria feito diferentemente:</h4>
+### O que seria feito diferentemente:
 <ul>
   <li>Uma estruturação mais bem elaborada da modularização</li>
   <li>Colocar o código no github desde o início do projeto</li>
