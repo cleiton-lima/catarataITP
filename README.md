@@ -8,24 +8,25 @@
 
 <h3>Diagnóstico de Catarata</h3>
 
+<h4>O que foi feito:</h4>
+<ul>
+  <li>Leitura das imagens de acordo com os tipos de dados suportados em C</li>
+  <li>Modularização do programa</li>
+  <li>Leitura de imagens PPM</li>
+  <li>Transformação das imagens em tons de cinza</li>
+  <li>Filtro Gaussiano</li>
+  <li>Binarização</li>
+  <li>Transformada de Hough</li>
+  <li>Filtro de Sobel</li>
+</ul>
 
-O que foi feito:
-- Leitura das imagens de acordo com os tipos de dados suportados em C
-- Modularização do programa
-- Leitura de imagens PPM
-- Transformação das imagens em tons de cinza
-- Filtro Gaussiano
-- Binarização
-- Transformada de Hough
-- Filtro de Sobel
+<h4>O que não foi feito:</h4>
+<ul>
+  <li>Aplicar corretamente a transformada de Hough na imagem Normal2</li>
+</ul>
 
-
-O que não foi feito:
-- Aplicar corretamente a transformada de Hough na imagem Normal2
-
-
-O que seria feito diferentemente:
-- Uma estruturação mais bem elaborada da modularização
-- Colocar o código no github desde o início do projeto
-- Fazer o projeto de acordo com as boas práticas de programação, fazendo o uso do inglês tanto no código
-  quanto nos comentários
+<h4>O que seria feito diferentemente:<h4>
+<ul>
+  <li>Uma estruturação mais bem elaborada da modularização</li>
+  <li>Colocar o código no github desde o início do projeto</li>
+  <li>Fazer o projeto de acordo com as boas práticas de programação, fazendo o uso do inglês tanto no código quanto nos comentários</li>
