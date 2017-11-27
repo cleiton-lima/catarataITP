@@ -25,8 +25,9 @@
   <li>Aplicar corretamente a transformada de Hough na imagem Normal2</li>
 </ul>
 
-<h4>O que seria feito diferentemente:<h4>
+<h4>O que seria feito diferentemente:</h4>
 <ul>
   <li>Uma estruturação mais bem elaborada da modularização</li>
   <li>Colocar o código no github desde o início do projeto</li>
   <li>Fazer o projeto de acordo com as boas práticas de programação, fazendo o uso do inglês tanto no código quanto nos comentários</li>
+</ul>
