@@ -1,7 +1,12 @@
-Projeto final das disciplinas Introdução as Técnicas de Programação e 
-Práticas e Técnicas de Programação
+# Projeto final das disciplinas Introdução as Técnicas de Programação(ITP) e Práticas e Técnicas de Programação(PTP)
 
-Diagnóstico de Catarata
+<h2>Autores</h2
+<ul>
+  <li><a href="https://github.com/cleiton-lima">Antonio Cleiton Ribeiro de Lima</a></li>
+  <li><a href="https://github.com/tiagojordao">Tiago Jordão Pereira Cabral de Morais</a></li> 
+</ul>
+
+<h3>Diagnóstico de Catarata</h3>
 
 
 O que foi feito:
