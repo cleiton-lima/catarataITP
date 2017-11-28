@@ -41,3 +41,4 @@ $  ./catarata -i Catarata.ppm -f ppm -o diagnostico.txt
   <li>Colocar o código no github desde o início do projeto</li>
   <li>Fazer o projeto de acordo com as boas práticas de programação, fazendo o uso do inglês tanto no código quanto nos comentários</li>
 </ul>
+teste
