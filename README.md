@@ -28,12 +28,14 @@ $  ./catarata -i Catarata.ppm -f ppm -o diagnostico.txt
   <li>Binarização</li>
   <li>Transformada de Hough</li>
   <li>Filtro de Sobel</li>
-  <li>Código comentado</li>
+  <li>Segmentação da pupila</li>
+  <li>Diagnóstico da catarata</li>
+  <li>Comentários no código</li>
 </ul>
 
 ### O que não foi feito:
 <ul>
-  <li>Aplicar corretamente a transformada de Hough na imagem Normal2</li>
+  <li>Todas as funcionalidades básicas foram cumpridas</li>
 </ul>
 
 ### O que seria feito diferentemente:
@@ -41,6 +43,7 @@ $  ./catarata -i Catarata.ppm -f ppm -o diagnostico.txt
   <li>Uma estruturação mais bem elaborada da modularização</li>
   <li>Colocar o código no github desde o início do projeto</li>
   <li>Fazer o projeto de acordo com as boas práticas de programação, fazendo o uso do inglês tanto no código quanto nos comentários</li>
+  <li>Refatorar algumas funções para que o tempo de execução do código fosse menor como por exemplo, na transformada de Hough</li>
 </ul>
 teste
 
