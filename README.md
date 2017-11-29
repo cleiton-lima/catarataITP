@@ -41,11 +41,9 @@ $  ./catarata -i Catarata.ppm -f ppm -o diagnostico.txt
 ### O que seria feito diferentemente:
 <ul>
   <li>Uma estruturação mais bem elaborada da modularização</li>
-  <li>Colocar o código no github desde o início do projeto</li>
   <li>Fazer o projeto de acordo com as boas práticas de programação, fazendo o uso do inglês tanto no código quanto nos comentários</li>
   <li>Refatorar algumas funções para que o tempo de execução do código fosse menor como por exemplo, na transformada de Hough</li>
 </ul>
-teste
 
 ### Funcionalidade Extra
 <ul>
