@@ -35,7 +35,7 @@ $  ./catarata -i Catarata.ppm -f ppm -o diagnostico.txt
 
 ### O que não foi feito:
 <ul>
-  <li>Todas as funcionalidades básicas foram cumpridas</li>
+  <li>A imagem Normal2 não está sendo reconhecida como deveria</li>
 </ul>
 
 ### O que seria feito diferentemente:
