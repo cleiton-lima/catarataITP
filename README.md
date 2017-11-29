@@ -28,6 +28,7 @@ $  ./catarata -i Catarata.ppm -f ppm -o diagnostico.txt
   <li>Binarização</li>
   <li>Transformada de Hough</li>
   <li>Filtro de Sobel</li>
+  <li>Código comentado</li>
 </ul>
 
 ### O que não foi feito:
@@ -42,3 +43,8 @@ $  ./catarata -i Catarata.ppm -f ppm -o diagnostico.txt
   <li>Fazer o projeto de acordo com as boas práticas de programação, fazendo o uso do inglês tanto no código quanto nos comentários</li>
 </ul>
 teste
+
+### Funcionalidade Extra
+<ul>
+  <li>Isolar a parte do <strong>flash</strong> das imagens</li>
+</ul>
