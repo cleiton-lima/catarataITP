@@ -72,18 +72,6 @@ Image * buildImage( int width, int height ){
 	return img;
 }
 
-//Liberar memoria
-
-void LibMem (Image *img){
-	int i;
-
-	for (i = 0 ; img -> height ; i++){
-		free(img->pixels[i]);
-		free(img->pixels);
-		free(img);
-	}
-}
-
 //Excluí comentarios das imagens
 
 Image * getImage(FILE *file){
@@ -127,6 +115,7 @@ Image * getImage(FILE *file){
 Image * grayScale(Image *img){
 	int i, j;
 
+printf("Criando Imagem em Escala de Cinzas...");
 	for(i = 0; i < img->height; i++){
 		for(j = 0; j < img->width; j++){
 			img->pixels[i][j].r = (int)(img->pixels[i][j].r*0.3 + img->pixels[i][j].g*0.59 +
@@ -137,6 +126,7 @@ Image * grayScale(Image *img){
 		}
 	}
 
+printf("...[OK]!\n");
 	return img;
 }
 
@@ -167,6 +157,8 @@ int filtro[5][5] = {{ 2,  4,  5,  4, 2 },
 
 Image *IF = buildImage(img->width, img->height);
 
+printf("Aplicando FiltroGaussiano...");
+
 for (i = 0 ; i < img->height ; i++){
 	for(j = 0 ; j < img->width ; j++){
 		sm = 0;
@@ -185,6 +177,8 @@ for (i = 0 ; i < img->height ; i++){
 		IF->pixels[i][j].b = (int) npx;
 	}
 }
+
+printf("...[OK]!\n");
 
 return IF;
 }
@@ -207,6 +201,8 @@ Image * FiltroSobel(Image *img){
 	int x, y, s = 0;
 	Pixel *p;
 	
+printf("Aplicando FiltroSobel...");
+
 	for (i = 1 ; i < img->height-1; i++){
 		for (j = 1 ; j < img->width-1; j++){
 			x = 0;
@@ -225,6 +221,8 @@ Image * FiltroSobel(Image *img){
 		}
 	}
 
+printf("...[OK]!\n");
+
 return IF;
 }
 
@@ -234,6 +232,8 @@ Image * binario(Image *img){
 
 	int i, j, t;
 	Image *bin = buildImage(img->width, img->height);
+
+printf("Aplicando Binarização...");
 
 	 if(img->width == 1015 && img->height == 759) {
     		t = 50;
@@ -259,6 +259,8 @@ Image * binario(Image *img){
 		}
 	}
 
+printf("...[OK]!\n");
+
 	return bin;
 		
 }
@@ -266,6 +268,8 @@ Image * binario(Image *img){
 //hough
 
 Image * filtroHough (Image *Bin, Image *N){
+
+printf("Aplicando TratamentoHough...");
 
 	int i, j ,a ,b;
 	int r, rmin, rmax;
@@ -345,6 +349,7 @@ Hough h = {0, 0, 0, matriz[0][0][0]};
 			}
 		}
 	}
+
 	for (i = 0; i < N->height ;i++){
 		for(j = 0; j < N->width ;j++){
 		int d = (int) sqrt(pow(i-h.x, 2) + pow(j-h.y, 2));
@@ -355,12 +360,57 @@ Hough h = {0, 0, 0, matriz[0][0][0]};
 			}
 		}
 	}
+
+printf("...[OK]!\n");
+
 return N;
 }
 
 //Diagnostico
 
-//DEV
+void Diagnostico (Image *img, char Nome[]){
+
+	int i, j;
+	double pxcatarata, pxpupila, p;
+
+printf("Relizando os testes...");
+
+	for(i = 1; i < img->height-1 ;i++){
+		for(j = 1; j < img->width-1 ;j++){
+			if(img->pixels[i][j].r != 0 && img->pixels[i][j].g != 0 && img->pixels[i][j].b != 0 && img->pixels[i][j].r != 0 && img->pixels[i][j].g != 255 && img->pixels[i][j].b != 0){
+				pxpupila++;
+				if(img->pixels[i][j].r > 80 && img->pixels[i][j].r < 200 && img->pixels[i][j].g > 80 && img->pixels[i][j].g < 200 && img->pixels[i][j].b > 80 && img->pixels[i][j].b < 200){
+					pxcatarata++;
+				}
+			}
+		}
+	}
+
+p = ((pxcatarata*100)/pxpupila);
+
+	FILE *file;
+	file = fopen(Nome, "w+");
+
+		if(! file){
+			printf("Problemas com o diagnostico!\n");
+			exit(1);
+		}
+		if(p >= 65){
+			fprintf(file, "Diagnostico: Olho com catarata!\n");
+			fprintf(file, "Nivel de Comprometimento: %f%%\n", p);
+		}
+		else{
+			fprintf(file, "Diagnostico: Olho sem catarata!\n");
+			fprintf(file, "Nivel de Comprometimento: %f%%\n", p);
+		}
+
+printf("...[OK]!\n");
+printf("Teste realizado com sucesso!\n\n");
+
+
+fclose(file);
+
+}
 
 //Salvar imagem
 

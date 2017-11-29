@@ -18,19 +18,19 @@ int main (int argc, char *argv[]){
 	strcat(Nome,arg2);
 
 
-	FILE *file = readFile(Nome); /* TROCAR ENTRADA PADRÃO APÓS OS TESTES */
+	FILE *file = readFile(Nome);
 	Image *image = getImage(file);
 
-	FILE *file1 = readFile(Nome); /* TROCAR ENTRADA PADRÃO APÓS OS TESTES */
+	FILE *file1 = readFile(Nome);
 	Image *image1 = getImage(file1);
 
 //Retorno com dimensões do arquivo
 	printf ("<==================Dimensões da imagem==================>\n");
 	printf("Largura: %d\n", (*image).width);
-	printf("Altura: %d\n", (*image).height);
+	printf("Altura: %d\n\n", (*image).height);
 
 	Image * GS = grayScale(image);
-	saveImage ("diagnostico/GrayScale.ppm", GS ,255);
+	saveImage ("diagnostico/GrayScale", GS ,255);
 
 	Image * FG = FiltroGaussiano (GS);
 	saveImage ("diagnostico/Gauss",FG,255);
@@ -43,6 +43,8 @@ int main (int argc, char *argv[]){
 
 	Image * Hough = filtroHough (Bin,image1);
 	saveImage ("diagnostico/Hough",Hough,255);
+
+	Diagnostico(Hough, argv[6]);
 
 	return 0;
 }
